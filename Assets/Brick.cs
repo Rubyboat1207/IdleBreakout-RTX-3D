@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class Brick : MonoBehaviour
 {
@@ -47,9 +48,18 @@ public class Brick : MonoBehaviour
         }
         ShownBrick.material = colors[wantedcolor];
     }
+    private void Update()
+    {
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(Vector3.Distance(transform.position, worldPosition) < 0.2)
+        {
+            Health -= 2;
+        }
+    }
+
     void OnMouseDown()
     {
-        Health--;
+        Health -= 2;
     }
     void Start()
     {
