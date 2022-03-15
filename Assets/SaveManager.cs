@@ -20,7 +20,7 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    void Save()
+    public void Save()
     {
         File.WriteAllText(Application.persistentDataPath + "/saveData.json", new SaveFile().getJson());
     }
