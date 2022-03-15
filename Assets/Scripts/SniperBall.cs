@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class SniperBall : Ball
 {
+    public static List<SniperBall> balls = new List<SniperBall>();
+
+    public void Start()
+    {
+        balls.Add(this);
+    }
     public override void OnWallCollide()
     {
         Debug.Log("Redirect");

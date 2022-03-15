@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public abstract class Ball : MonoBehaviour
 {
     public float speed = 5;
     public float damage = 1;

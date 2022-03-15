@@ -9,6 +9,7 @@ public class Brick : MonoBehaviour
     public List<Material> colors = new List<Material>();
     [SerializeField]
     Renderer ShownBrick;
+    public UpgradeButton ClickPowerProvider;
 
     private int health; //internal
     public int Health //property
@@ -40,7 +41,6 @@ public class Brick : MonoBehaviour
             
         }
     }
-
     void UpdateColors()
     {
         string strHealth = (Health).ToString();
@@ -58,9 +58,10 @@ public class Brick : MonoBehaviour
 
     void OnMouseDown()
     {
-        Health -= 1;
+        Health -= ClickPowerProvider.count + 1;
     }
-    void Start()
+    static bool isStarted = false;
+    private void Start()
     {
         Health = RoundHandler.RoundNumber;
     }

@@ -107,12 +107,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5573876002376998876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3ae4dc618d2ff441b06155fab826cda, type: 3}
+  m_Script: {fileID: 11500000, guid: bd6d4324c7dca2242a2cd5ddfcfb5881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   damage: 1
-  vector: {x: -4, y: 4, z: 0}
+  vector: {x: 0, y: 0, z: 0}
 --- !u!54 &-4040145874749492032
 Rigidbody:
   m_ObjectHideFlags: 0
