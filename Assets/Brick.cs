@@ -18,13 +18,20 @@ public class Brick : MonoBehaviour
         }
         set
         {
+            MoneyCounter.AddMoney(Mathf.Clamp(health - value, 0, health));
             health = value;
-            if(Health <= 0)
+            if (Health <= 0)
             {
                 if (transform.parent.GetComponent<Level>())
                 {
                     var level = transform.parent.GetComponent<Level>();
-                    level.Bricks.RemoveAt(level.Bricks.IndexOf(gameObject));
+                    try
+                    {
+                        level.Bricks.RemoveAt(level.Bricks.IndexOf(gameObject));
+                    }catch
+                    {
+
+                    }
                 }
                 Destroy(gameObject);
             }
@@ -48,18 +55,10 @@ public class Brick : MonoBehaviour
         }
         ShownBrick.material = colors[wantedcolor];
     }
-    private void Update()
-    {
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if(Vector3.Distance(transform.position, worldPosition) < 0.2)
-        {
-            Health -= 2;
-        }
-    }
 
     void OnMouseDown()
     {
-        Health -= 2;
+        Health -= 1;
     }
     void Start()
     {

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class BrickLoader : MonoBehaviour
 {
+    public List<GameObject> levels = new List<GameObject>();
     [SerializeField]
-    List<GameObject> levels = new List<GameObject>();
-    [SerializeField]
-    int currentlevelpattern;
+    public int currentlevelpattern;
     [SerializeField]
     GameObject currentLevelObject;
     private void Start()
