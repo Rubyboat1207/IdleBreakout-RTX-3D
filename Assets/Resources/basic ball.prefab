@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6d4324c7dca2242a2cd5ddfcfb5881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   damage: 1
   vector: {x: 0, y: 0, z: 0}
 --- !u!54 &-4040145874749492032

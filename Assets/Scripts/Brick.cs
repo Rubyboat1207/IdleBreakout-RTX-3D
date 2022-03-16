@@ -9,7 +9,7 @@ public class Brick : MonoBehaviour
     public List<Material> colors = new List<Material>();
     [SerializeField]
     Renderer ShownBrick;
-    public UpgradeButton ClickPowerProvider;
+    public static UpgradeMenuController ClickPowerProvider;
 
     private int health; //internal
     public int Health //property
@@ -58,11 +58,15 @@ public class Brick : MonoBehaviour
 
     void OnMouseDown()
     {
-        Health -= ClickPowerProvider.count + 1;
+        Health -= ClickPowerProvider.ClickPower + 1;
     }
     static bool isStarted = false;
     private void Start()
     {
         Health = RoundHandler.RoundNumber;
+        if(ClickPowerProvider == null)
+        {
+            ClickPowerProvider = GameObject.Find("UpgradeMenu").GetComponent<UpgradeMenuController>();
+        }    
     }
 }

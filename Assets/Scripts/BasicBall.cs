@@ -9,5 +9,6 @@ public class BasicBall : Ball
     public void Start()
     {
         balls.Add(this);
+        base.Start();
     }
 }

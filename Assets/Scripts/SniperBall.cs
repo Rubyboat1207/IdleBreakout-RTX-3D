@@ -9,6 +9,7 @@ public class SniperBall : Ball
     public void Start()
     {
         balls.Add(this);
+        base.Start();
     }
     public override void OnWallCollide()
     {

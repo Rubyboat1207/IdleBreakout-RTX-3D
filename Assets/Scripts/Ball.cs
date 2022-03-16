@@ -8,7 +8,7 @@ public abstract class Ball : MonoBehaviour
     public float damage = 1;
     public Vector3 vector = Vector3.zero;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         vector = getRandomVector();
     }

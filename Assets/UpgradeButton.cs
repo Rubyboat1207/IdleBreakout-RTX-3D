@@ -8,4 +8,5 @@ public class UpgradeButton : MonoBehaviour
     public int cost;
     public TextMeshProUGUI costText;
     public int count;
+    public string PowerName;
 }
