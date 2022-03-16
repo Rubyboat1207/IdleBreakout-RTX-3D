@@ -76,7 +76,6 @@ public class SaveFile
         RoundHandler.RoundNumber = currentLevel;
         MoneyCounter.money = money;
         UpgradeMenuController.instance.upgrades[0].count = clickUpgradeLevel;
-
     }
 
     public string getJson()
